@@ -1,5 +1,6 @@
 ﻿using SortingExperiment;
 using System;
+using System.Diagnostics;
 
 namespace ConsoleApp2
 {
@@ -8,7 +9,7 @@ namespace ConsoleApp2
        static void Main(string[] args)
         {
             //int[] arr = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
-            int[] arr = createArr(10, false, true, 10, 29);
+            int[] arr = createArr(1000, false, true, 0, 1100);
 
             Console.WriteLine("Original array : ");
             foreach (var item in arr)
@@ -18,7 +19,10 @@ namespace ConsoleApp2
             Console.WriteLine();
 
             // QuickSort.sort(arr, 0, arr.Length - 1);
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             HeapSort.sort(arr);
+            sw.Stop();
 
             Console.WriteLine();
             Console.WriteLine("Sorted array : ");
@@ -28,7 +32,8 @@ namespace ConsoleApp2
                 Console.Write(" " + item);
             }
             Console.WriteLine();
-            
+
+            Console.WriteLine("Time elapsed (ms): {0}", sw.Elapsed.TotalMilliseconds );
 
         }
 
