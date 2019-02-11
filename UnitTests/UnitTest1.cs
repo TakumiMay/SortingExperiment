@@ -17,10 +17,15 @@ namespace UnitTests
 
             //Act
             HeapSort.sort(array);
+            
             int[] esperado = { 2, 4, 5, 10, 16, 20, 40, 60, 100, 102 };
 
             //Assert
-            Assert.AreEqual(esperado, array); 
+            for(int i = 0; i < esperado.Length; i++) {
+                Assert.IsTrue(esperado[i] == array[i]);
+            }
+            //Assert.AreEqual(esperado, array); 
+            
 
         }
 
@@ -33,7 +38,17 @@ namespace UnitTests
             HeapSort.sort(array);
 
             int[] esperado = { 5, 78, 98, 98, 108, 200, 600, 800, 1000 };
-            Assert.AreEqual(esperado, array);
+            //Assert
+            for (int i = 0; i < esperado.Length; i++)
+            {
+                Assert.IsTrue(esperado[i] == array[i]);
+            }
+        }
+
+        [TestMethod]
+        public void prueba()
+        {
+            Assert.IsTrue(true);
         }
 
 
