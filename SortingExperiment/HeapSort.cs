@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortingExperiment
 {
-    class HeapSort
+   public class HeapSort
     {
         public static void sort<T>(T[] array) where T : IComparable<T>
         {

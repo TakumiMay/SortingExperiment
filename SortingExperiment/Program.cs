@@ -3,9 +3,9 @@ using System;
 
 namespace ConsoleApp2
 {
-    class Program
+     public class Program
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
             //int[] arr = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
             int[] arr = createArr(10, false, true, 10, 29);
@@ -28,7 +28,7 @@ namespace ConsoleApp2
                 Console.Write(" " + item);
             }
             Console.WriteLine();
-
+            
 
         }
 

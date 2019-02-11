@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortingExperiment
 {
-    class QuickSort
+    public class QuickSort
     {
         public static void sort(int[] arr, int left, int right)
         {
